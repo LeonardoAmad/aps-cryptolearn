@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CryptoLearn - Segurança Digital e Criptografia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" />
+</head>
+
+<body>
+    <header class="nav">
+        <a href="{{url_for('index')}}"><div class="logo">Crypto<span>Learn</span></div></a>
+        <nav>
+            <a href="historia.html">História</a>
+            <a href="{{url_for('cesar')}}">Cifra de César</a>
+            <a href="{{url_for('substituicao')}}">Substituição</a>
+            <a href="{{url_for('transformacao')}}">Transformação</a>
+            <a href="contatos.html">Contatos</a>
+            <button class="cta" id="cta">Quero Praticar!</button>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <section class="hero-left">
+            <h1>Sejam muito Bem Vindos <br> ao <span>CriptoLearn!</span></h1>
+            <p>Explore o mundo da criptografia de forma simples e interativa. Venha conhecer o mundo da Criptografia</p>
+            <br>
+            <div class="actions">
+                <button class="btn btn-primary">Começar</button>
+            </div>
+        </section>
+
+        <section class="hero-right">
+            <img src="{{url_for('static', filename='imagens/bghome5.png')}}" alt="Robô CryptoLearn" class="hero-image">
+        </section>
+
+    </main>
+
+    <section id="about" class="info">
+  <div class="info-grid">
+    <div class="card glass small">
+      <h3>O que é?</h3>
+      <p>Uma demonstração prática de criptografia e segurança digital, com foco em aprendizado e interatividade.</p>
+    </div>
+
+    <div class="card glass large">
+      <h3>Performance</h3>
+      <p>Implementações otimizadas, renderização eficiente e suporte completo a dispositivos móveis.</p>
+      <img src="{{url_for('static', filename='imagens/gif-card1.gif')}}" alt="" class="img-card">
+    </div>
+
+    <div class="card glass small">
+      <h3>Mobile e Acessibilidade</h3>
+      <p>Nosso design adaptável garante uma experiência fluida e envolvente em qualquer dispositivo — do desktop ao celular.
+      O CryptoLearn é responsivo, acessível e feito para acompanhar você onde quer que esteja.</p>
+    </div>
+  </div>
+</section>
+
+
+    <footer class="footer">
+        <p>© cryptoguard — built with spline</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

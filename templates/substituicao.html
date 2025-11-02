@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Substituição - CryptoLearn</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+  <header class="nav">
+    <a href="{{url_for('index')}}"><div class="logo">Crypto<span>Learn</span></div></a>
+    <nav>
+      <a href="historia.html">História</a>
+      <a href="{{url_for('cesar')}}" class="active">Cifra de César</a>
+      <a href="{{url_for('substituicao')}}">Substituição</a>
+      <a href="{{url_for('transformacao')}}">Transformação</a>
+      <a href="contatos.html">Contatos</a>
+      <button class="cta" id="cta">Quero Praticar!</button>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <section class="hero-left">
+      <h1>Explore o poder da <br><span>Cifra de Substituição!</span></h1>
+<p>Descubra como a substituição de caracteres transforma mensagens simples em códigos indecifráveis. <br>Uma técnica clássica que evoluiu e inspirou diversos sistemas modernos de criptografia.</p>
+<br>
+
+      <div class="actions">
+        <a href="#cifra-cesar"><button class="btn btn-primary">Experimentar</button></a>
+      </div>
+    </section>
+
+    <section class="hero-right">
+      <img src="{{url_for('static', filename='imagens/bg-home7.png')}}" alt="Cifra de César" class="hero-image">
+    </section>
+  </main>
+<br><br><br><br>
+<section id="intro" class="intro-full3">
+  <div class="intro-overlay">
+<div class="intro-text">
+  <h2>Conheça o poder da Criptografia por <span>Substituição</span></h2>
+  <p>
+    A <strong><span>Cifra de Substituição</span></strong> é uma evolução natural da Cifra de César,
+    baseada na troca de cada caractere por outro símbolo, letra ou número segundo uma correspondência
+    pré-estabelecida. Essa técnica foi amplamente utilizada ao longo da história para ocultar mensagens
+    e garantir a confidencialidade da informação.
+  </p><br>
+  <p class="sub">
+    No <strong><span>CryptoLearn</span></strong>, a Cifra de Substituição é apresentada de forma prática
+    e intuitiva. Desenvolvido com <strong><span>Python</span></strong> e <strong><span>Flask</span></strong>,
+    o projeto demonstra como a substituição sistemática de caracteres cria padrões únicos de codificação,
+    revelando os princípios fundamentais que inspiraram algoritmos modernos de criptografia e segurança digital.
+  </p>
+  <button class="btn btn-primary">Saiba mais</button>
+</div>
+
+  </div>
+</section>
+
+<section id="cryptos" class="crypto-section">
+  <h2 class="section-title">Criptografia por <span>Substituição</span></h2>
+  <p class="section-subtitle">Entenda como a substituição de símbolos e letras tornou-se uma das bases da criptografia moderna.</p>
+
+  <div class="crypto-cards">
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/10.png')}}" alt="Cifra de Substituição" class="crypto-img" />
+        <span class="crypto-tag">Histórica</span>
+      </div>
+      <div class="card-body">
+        <h3>Origem e Conceito</h3>
+        <p>A <span>Cifra de Substituição</span> surgiu como evolução da Cifra de César, substituindo cada letra por outro caractere conforme uma tabela ou chave pré-definida. Essa técnica expandiu as possibilidades de criptografia e influenciou métodos modernos.</p>
+      </div>
+    </div>
+
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/9.png')}}" alt="Funcionamento" class="crypto-img" />
+        <span class="crypto-tag">Funcional</span>
+      </div>
+      <div class="card-body">
+        <h3>Como Funciona?</h3>
+        <p>Em vez de apenas deslocar o alfabeto, cada letra é trocada por outro símbolo ou caractere específico. Isso cria um <span>mapeamento personalizado</span> entre o texto original e o criptografado, tornando-o mais seguro.</p>
+      </div>
+    </div>
+
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/8.png')}}" alt="Exemplo Prático" class="crypto-img" />
+        <span class="crypto-tag">Visual</span>
+      </div>
+      <div class="card-body">
+        <h3>Exemplo Prático</h3>
+        <p>Se “A” for substituído por “X”, “B” por “M” e assim por diante, a palavra <span>“DADOS”</span> pode se tornar <span>“XMXPL”</span>. Essa variação torna o processo de decodificação <span>muito mais complexo</span> sem a chave correta.</p>
+      </div>
+    </div>
+
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/11.png')}}" alt="Importância" class="crypto-img" />
+        <span class="crypto-tag">Relevante</span>
+      </div>
+      <div class="card-body">
+        <h3>Importância Atual</h3>
+        <p>A lógica da substituição é usada até hoje em algoritmos modernos, inspirando sistemas de <span>criptografia simétrica</span> e protocolos de segurança que protegem dados em redes e comunicações digitais.</p>
+      </div>
+    </div>
+
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/12.png')}}" alt="Aplicação" class="crypto-img" />
+        <span class="crypto-tag">Educacional</span>
+      </div>
+      <div class="card-body">
+        <h3>Aplicações Práticas</h3>
+        <p>Além do uso histórico, a Cifra de Substituição é amplamente aplicada em <span>atividades educacionais</span> e jogos de lógica, servindo como introdução ideal ao estudo da <span>criptografia e cibersegurança</span>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="cifra-cesar" class="cifra-container">
+    <h2 class="section-title">Teste a Criptografia por<span> Substituição</span></h2>
+    <p class="section-subtitle">Insira uma mensagem e escolha o deslocamento para criptografar ou descriptografar.</p>
+
+    <div class="cifra-box glass">
+      <form id="cesar-form" action="{{url_for('substituicao')}}" method="post">
+        <div class="input-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui...">{{mensagem or ''}}</textarea>
+        </div>
+
+        <div class="input-group">
+          <label for="chave">Chave (26 letras)</label>
+          <input type="text" id="chave" name="chave" maxlength="26" value="{{chave}}" />
+        </div>
+
+        <div class="btn-group">
+          <button type="submit" class="btn btn-primary">Criptografar</button>
+          <button type="button" class="btn btn-ghost" id="btn-decriptar">Descriptografar</button>
+        </div>
+      </form>
+
+      <div id="resultado" class="resultado">
+        <h3>Resultado:</h3>
+        <p id="texto-resultado">
+            {% if resultado %}
+                {{resultado}}
+            {% else %}
+                Sua mensagem criptografada aparecerá aqui.
+            {% endif %}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 CryptoLearn — desenvolvido para fins educacionais</p>
+  </footer>
+</body>
+
+</html>

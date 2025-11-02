@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cifra de César - CryptoLearn</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+  <header class="nav">
+    <a href="{{url_for('index')}}"><div class="logo">Crypto<span>Learn</span></div></a>
+    <nav>
+      <a href="historia.html">História</a>
+      <a href="{{url_for('cesar')}}" class="active">Cifra de César</a>
+      <a href="{{url_for('substituicao')}}">Substituição</a>
+      <a href="{{url_for('transformacao')}}">Transformação</a>
+      <a href="contatos.html">Contatos</a>
+      <button class="cta" id="cta">Quero Praticar!</button>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <section class="hero-left">
+      <h1>Desvende os segredos da <br><span>Cifra de César!</span></h1>
+      <p>Aprenda o funcionamento de uma das técnicas de criptografia mais antigas do mundo, utilizada desde o </br> Império Romano para proteger mensagens confidenciais.</p>
+      <br>
+      <div class="actions">
+        <a href="#cifra-cesar"><button class="btn btn-primary">Experimentar</button></a>
+      </div>
+    </section>
+
+    <section class="hero-right">
+      <img src="{{url_for('static', filename='imagens/bg-home6.png')}}" alt="Cifra de César" class="hero-image">
+    </section>
+  </main>
+
+<br><br><br><br>
+
+<section id="intro" class="intro-full2">
+  <div class="intro-overlay">
+<div class="intro-text">
+  <h2>A história da <span>Cifra de César</span> começa aqui!</h2>
+  <p>
+    Criada há mais de dois mil anos, a <strong><span>Cifra de César</span></strong> foi uma das primeiras
+    técnicas de criptografia utilizadas para proteger mensagens militares do Império Romano.
+    Apesar de simples, seu conceito introduziu as bases da codificação e da segurança da informação.
+  </p><br>
+  <p class="sub">
+    No <strong><span>CryptoLearn</span></strong>, essa técnica clássica ganha vida através de uma
+    abordagem interativa e moderna. Desenvolvido com <strong><span>Python</span></strong> e
+    <strong><span>Flask</span></strong>, o projeto permite compreender na prática como o deslocamento
+    de caracteres pode transformar mensagens e como esse princípio evoluiu para os sistemas de
+    criptografia atuais.
+  </p>
+  <button class="btn btn-primary">Saiba mais</button>
+</div>
+
+  </div>
+</section>
+
+<section id="cryptos" class="crypto-section">
+  <h2 class="section-title">Criptografia de <span>César</span></h2>
+  <p class="section-subtitle">Aprenda na prática como funcionam as principais técnicas utilizadas na segurança digital.</p>
+
+  <div class="crypto-cards">
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/8.png')}}" alt="Cifra de César" class="crypto-img" />
+        <span class="crypto-tag">Clássica</span>
+      </div>
+      <div class="card-body">
+    <h3>Origem Histórica</h3>
+    <p>A Cifra de César surgiu no <span>Império Romano</span>, usada por Júlio César para enviar mensagens secretas a seus generais. É considerada uma das <span>primeiras formas de criptografia</span> da história.</p>
+      </div>
+    </div>
+
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/10.png')}}" alt="Substituição" class="crypto-img" />
+        <span class="crypto-tag">Simples</span>
+      </div>
+      <div class="card-body">
+    <h3>Como Funciona?</h3>
+    <p>Baseia-se na <span>substituição de letras</span>, deslocando o alfabeto por um número fixo de posições. Assim, um simples texto se transforma em um código criptografado.</p>
+      </div>
+    </div>
+
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/11.png')}}" alt="Substituição" class="crypto-img" />
+        <span class="crypto-tag">Eficaz</span>
+      </div>
+      <div class="card-body">
+    <h3>Exemplo Prático</h3>
+    <p>Com um deslocamento de 3, <span>“CRYPTO”</span> se torna <span>“FUBSWR”</span> . Esse processo mostra como a matemática pode transformar informações simples em mensagens sigilosas.</p>
+      </div>
+    </div>
+
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/9.png')}}" alt="Substituição" class="crypto-img" />
+        <span class="crypto-tag">Segurança</span>
+      </div>
+      <div class="card-body">
+    <h3>Por que é importante?</h3>
+    <p>A Cifra de César introduz o conceito de chave, essencial na <span>segurança digital moderna</span>, sendo base para entender cifras mais avançadas como AES e RSA.</p>
+      </div>
+    </div>
+
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/12.png')}}" alt="Transposição" class="crypto-img" />
+        <span class="crypto-tag">Lógica</span>
+      </div>
+      <div class="card-body">
+    <h3>Sabia disso?</h3>
+    <p>Mesmo após dois mil anos, a lógica da Cifra de César ainda é usada em <span>desafios de programação</span>, jogos e puzzles de segurança digital.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="cifra-cesar" class="cifra-container">
+    <h2 class="section-title">Teste a <span>Cifra de César</span></h2>
+    <p class="section-subtitle">Insira uma mensagem e escolha o deslocamento para criptografar ou descriptografar.</p>
+
+    <div class="cifra-box glass">
+      <form id="cesar-form" action="{{url_for('cesar')}}#cifra-cesar" method="post" >
+        <div class="input-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui...">{{mensagem or ''}}</textarea>
+        </div>
+
+        <div class="input-group">
+          <label for="chave">Deslocamento</label>
+          <input type="number" id="chave" name="chave" min="1" max="25" value="{{chave}}" />
+        </div>
+
+        <div class="btn-group">
+          <button type="submit" class="btn btn-primary">Criptografar</button>
+          <button type="button" class="btn btn-ghost" id="btn-decriptar">Descriptografar</button>
+        </div>
+      </form>
+
+      <div id="resultado" class="resultado">
+        <h3>Resultado:</h3>
+        <p id="texto-resultado">
+            {% if resultado %}
+                {{resultado}}
+            {% else %}
+                Sua mensagem criptografada aparecerá aqui.
+            {% endif %}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 CryptoLearn — desenvolvido para fins educacionais</p>
+  </footer>
+</body>
+
+</html>

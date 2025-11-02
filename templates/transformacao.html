@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Transposição - CryptoLearn</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+  <header class="nav">
+    <a href="index.html"><div class="logo">Crypto<span>Learn</span></div></a>
+    <nav>
+      <a href="historia.html">História</a>
+      <a href="{{url_for('cesar')}}">Cifra de César</a>
+      <a href="{{url_for('substituicao')}}">Substituição</a>
+      <a href="{{url_for('transformacao')}}" class="active">Transposição</a>
+      <a href="contatos.html">Contatos</a>
+      <button class="cta" id="cta">Quero Praticar!</button>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <section class="hero-left">
+      <h1>Descubra o poder da <br><span>Cifra de Transposição!</span></h1>
+      <p>A técnica que reorganiza a estrutura das mensagens, embaralhando suas letras de forma estratégica.<br>
+      Uma abordagem inteligente que combina lógica e matemática para reforçar a segurança da informação.</p>
+      <br>
+      <div class="actions">
+        <a href="#cifra-transposicao"><button class="btn btn-primary">Experimentar</button></a>
+      </div>
+    </section>
+
+    <section class="hero-right">
+      <img src="{{url_for('static', filename='imagens/bg-home8.png')}}" alt="Cifra de Transposição" class="hero-image">
+    </section>
+  </main>
+
+  <br><br><br><br>
+
+  <section id="intro" class="intro-full4">
+    <div class="intro-overlay">
+      <div class="intro-text">
+        <h2>Entenda os princípios da <span>Cifra de Transposição</span></h2>
+        <p>
+          A <strong><span>Cifra de Transposição</span></strong> é um método de criptografia que altera a
+          <strong>posição dos caracteres</strong> em uma mensagem, sem modificar as letras em si.
+          Em vez de substituir, ela <strong>reorganiza</strong> a sequência das palavras, criando um novo padrão que
+          apenas quem conhece a chave correta pode decifrar.
+        </p><br>
+        <p class="sub">
+          No <strong><span>CryptoLearn</span></strong>, essa técnica é explorada de forma didática e visual.
+          Desenvolvida com <strong><span>Python</span></strong> e <strong><span>Flask</span></strong>, a aplicação permite que
+          você teste diferentes padrões de transposição e compreenda como a ordem dos elementos pode ser usada como uma poderosa
+          ferramenta de segurança na era digital.
+        </p>
+        <button class="btn btn-primary">Saiba mais</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="cryptos" class="crypto-section">
+    <h2 class="section-title">Criptografia por <span>Transposição</span></h2>
+    <p class="section-subtitle">Conheça as bases matemáticas por trás da técnica que transforma a estrutura das mensagens.</p>
+
+    <div class="crypto-cards">
+      <div class="crypto-card">
+        <div class="card-header">
+          <img src="{{url_for('static', filename='imagens/8.png')}}" alt="Cifra de Transposição" class="crypto-img" />
+          <span class="crypto-tag">Histórica</span>
+        </div>
+        <div class="card-body">
+          <h3>Origem e Evolução</h3>
+          <p>Usada desde a Antiguidade, a <span>Cifra de Transposição</span> surgiu em tempos de guerra, quando mensageiros
+          reorganizavam palavras e letras para esconder o verdadeiro conteúdo das mensagens interceptadas.</p>
+        </div>
+      </div>
+
+      <div class="crypto-card">
+        <div class="card-header">
+          <img src="{{url_for('static', filename='imagens/9.png')}}" alt="Funcionamento" class="crypto-img" />
+          <span class="crypto-tag">Lógica</span>
+        </div>
+        <div class="card-body">
+          <h3>Como Funciona?</h3>
+          <p>Os caracteres da mensagem original são dispostos em uma <span>grade ou tabela</span> e depois lidos em uma ordem
+          diferente — por colunas, diagonais ou padrões específicos. Isso cria uma nova sequência aparentemente sem sentido.</p>
+        </div>
+      </div>
+
+      <div class="crypto-card">
+        <div class="card-header">
+          <img src="{{url_for('static', filename='imagens/10.png')}}" alt="Exemplo Prático" class="crypto-img" />
+          <span class="crypto-tag">Aplicada</span>
+        </div>
+        <div class="card-body">
+          <h3>Exemplo Prático</h3>
+          <p>A palavra <span>“SEGURANÇA”</span> pode ser organizada em linhas e lida verticalmente, resultando em algo
+          como <span>“SGEUCNARA”</span>. Essa simples inversão torna a mensagem <span>ilegível sem o padrão correto</span>.</p>
+        </div>
+      </div>
+
+      <div class="crypto-card">
+        <div class="card-header">
+          <img src="{{url_for('static', filename='imagens/11.png')}}" alt="Importância" class="crypto-img" />
+          <span class="crypto-tag">Importante</span>
+        </div>
+        <div class="card-body">
+          <h3>Por que é Relevante?</h3>
+          <p>Esse tipo de cifra demonstra como a <span>organização lógica</span> e o uso de padrões estruturais podem criar
+          camadas adicionais de segurança, servindo de base para algoritmos criptográficos mais complexos.</p>
+        </div>
+      </div>
+
+      <div class="crypto-card">
+        <div class="card-header">
+          <img src="{{url_for('static', filename='imagens/12.png')}}" alt="Aplicação Moderna" class="crypto-img" />
+          <span class="crypto-tag">Moderna</span>
+        </div>
+        <div class="card-body">
+          <h3>Aplicações Atuais</h3>
+          <p>Os princípios da transposição são usados em <span>compressão de dados</span>, <span>embaralhamento de senhas</span>
+          e <span>criptografia híbrida</span>, mostrando que conceitos antigos ainda sustentam a segurança digital moderna.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cifra-transposicao" class="cifra-container">
+    <h2 class="section-title">Teste a Criptografia por<span> Transposição</span></h2>
+    <p class="section-subtitle">Digite uma mensagem e veja como a simples troca de posições altera totalmente o texto.</p>
+
+    <div class="cifra-box glass">
+      <form id="transposicao-form" method="post" action="/criptografar">
+        <div class="input-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..."></textarea>
+        </div>
+
+        <div class="input-group">
+          <label for="chave">Chave</label>
+          <input type="text" id="chave" name="chave" placeholder="Ex: 3142" />
+        </div>
+
+        <div class="btn-group">
+          <button type="submit" class="btn btn-primary">Criptografar</button>
+          <button type="button" class="btn btn-ghost" id="btn-decriptar">Descriptografar</button>
+        </div>
+      </form>
+
+      <div id="resultado" class="resultado">
+        <h3>Resultado:</h3>
+        <p id="texto-resultado">Sua mensagem criptografada aparecerá aqui.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 CryptoLearn — desenvolvido para fins educacionais</p>
+  </footer>
+</body>
+
+</html>
