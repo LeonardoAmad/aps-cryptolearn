@@ -12,11 +12,11 @@
   <header class="nav">
     <a href="{{url_for('index')}}"><div class="logo">Crypto<span>Learn</span></div></a>
     <nav>
-      <a href="historia.html">História</a>
+      <a href="{{url_for('historia')}}">História</a>
       <a href="{{url_for('cesar')}}">Cifra de César</a>
       <a href="{{url_for('substituicao')}}">Substituição</a>
       <a href="{{url_for('transposicao')}}" class="active">Transposição</a>
-      <a href="contatos.html">Contatos</a>
+      <a href="{{url_for('contatos')}}">Contatos</a>
       <button class="cta" id="cta">Quero Praticar!</button>
     </nav>
   </header>
@@ -132,7 +132,7 @@
     <p class="section-subtitle">Digite uma mensagem e veja como a simples troca de posições altera totalmente o texto.</p>
 
     <div class="cifra-box glass">
-      <form id="transposicao-form" action={{url_for('transposicao')}} method="post" >
+      <form id="transposicao-form" action="{{url_for('transposicao')}}#cifra-transposicao" method="post" >
         <div class="input-group">
           <label for="mensagem">Mensagem</label>
           <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui...">{{mensagem or ''}}</textarea>
@@ -144,8 +144,8 @@
         </div>
 
         <div class="btn-group">
-          <button type="submit" class="btn btn-primary">Criptografar</button>
-          <button type="button" class="btn btn-ghost" id="btn-decriptar">Descriptografar</button>
+          <button type="submit" name="operacao" value="criptografar" class="btn btn-primary">Criptografar</button>
+          <button type="submit" name="operacao" value="descriptografar" class="btn btn-ghost" id="btn-descriptografar">Descriptografar</button>
         </div>
       </form>
 

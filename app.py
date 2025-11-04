@@ -65,16 +65,20 @@ def substituicao():
 def transposicao():
     if request.method == 'POST':
         mensagem = request.form.get('mensagem', '')
-        chave = request.form.get('chave', '').strip().upper()
+        chave_str = request.form.get('chave', '').strip()
         operacao = request.form.get('operacao', 'criptografar')
 
-        resultado = cifra_transposicao(mensagem, chave, operacao)
+        chave, erro = validar_chave(chave_str)
+        if erro:
+            resultado = f"Erro na chave: {erro}"
+        else:
+            resultado = cifra_transposicao(mensagem, chave, operacao)
 
         return render_template(
             'transposicao.html',
             resultado=resultado,
             mensagem=mensagem,
-            chave=chave,
+            chave=chave_str,
             operacao=operacao
         )
     return render_template('transposicao.html')
