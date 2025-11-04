@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from criptografia.cesar import cifra_cesar
 from criptografia.substituicao import cifra_substituicao, gerar_chave_aleatoria
+from criptografia.transposicao import cifra_transposicao, validar_chave
 
 app = Flask(__name__)
 
@@ -60,8 +61,22 @@ def substituicao():
 
     return render_template('substituicao.html')
 
-@app.route('/transformacao')
-def transformacao():
-    return render_template('transformacao.html')
+@app.route('/transposicao', methods=['GET', 'POST'])
+def transposicao():
+    if request.method == 'POST':
+        mensagem = request.form.get('mensagem', '')
+        chave = request.form.get('chave', '').strip().upper()
+        operacao = request.form.get('operacao', 'criptografar')
+
+        resultado = cifra_transposicao(mensagem, chave, operacao)
+
+        return render_template(
+            'transposicao.html',
+            resultado=resultado,
+            mensagem=mensagem,
+            chave=chave,
+            operacao=operacao
+        )
+    return render_template('transposicao.html')
 
 app.run()
