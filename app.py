@@ -81,6 +81,7 @@ def transposicao():
             chave=chave_str,
             operacao=operacao
         )
+
     return render_template('transposicao.html')
 
 app.run()
