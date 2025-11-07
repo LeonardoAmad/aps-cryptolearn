@@ -10,13 +10,13 @@
 
 <body>
   <header class="nav">
-    <a href="index.html"><div class="logo">Crypto<span>Learn</span></div></a>
+    <a href="{{url_for('index')}}"><div class="logo">Crypto<span>Learn</span></div></a>
     <nav>
-      <a href="historia.html">História</a>
+      <a href="{{url_for('historia')}}">História</a>
       <a href="{{url_for('cesar')}}">Cifra de César</a>
       <a href="{{url_for('substituicao')}}">Substituição</a>
-      <a href="{{url_for('transformacao')}}" class="active">Transposição</a>
-      <a href="contatos.html">Contatos</a>
+      <a href="{{url_for('transposicao')}}" class="active">Transposição</a>
+      <a href="{{url_for('contatos')}}">Contatos</a>
       <button class="cta" id="cta">Quero Praticar!</button>
     </nav>
   </header>
@@ -132,26 +132,32 @@
     <p class="section-subtitle">Digite uma mensagem e veja como a simples troca de posições altera totalmente o texto.</p>
 
     <div class="cifra-box glass">
-      <form id="transposicao-form" method="post" action="/criptografar">
+      <form id="transposicao-form" action="{{url_for('transposicao')}}#cifra-transposicao" method="post" >
         <div class="input-group">
           <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..."></textarea>
+          <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui...">{{mensagem or ''}}</textarea>
         </div>
 
         <div class="input-group">
-          <label for="chave">Chave</label>
-          <input type="text" id="chave" name="chave" placeholder="Ex: 3142" />
+          <label for="chave">Deslocamento</label>
+          <input type="text" id="chave" name="chave" placeholder="Ex: 3142" value="{{chave}}" />
         </div>
 
         <div class="btn-group">
-          <button type="submit" class="btn btn-primary">Criptografar</button>
-          <button type="button" class="btn btn-ghost" id="btn-decriptar">Descriptografar</button>
+          <button type="submit" name="operacao" value="criptografar" class="btn btn-primary">Criptografar</button>
+          <button type="submit" name="operacao" value="descriptografar" class="btn btn-ghost" id="btn-descriptografar">Descriptografar</button>
         </div>
       </form>
 
       <div id="resultado" class="resultado">
         <h3>Resultado:</h3>
-        <p id="texto-resultado">Sua mensagem criptografada aparecerá aqui.</p>
+        <p id="texto-resultado">
+            {% if resultado %}
+                {{resultado}}
+            {% else %}
+                Sua mensagem criptografada aparecerá aqui.
+            {% endif %}
+        </p>
       </div>
     </div>
   </section>

@@ -12,11 +12,11 @@
     <header class="nav">
         <a href="{{url_for('index')}}"><div class="logo">Crypto<span>Learn</span></div></a>
         <nav>
-            <a href="historia.html">História</a>
+            <a href="{{url_for('historia')}}">História</a>
             <a href="{{url_for('cesar')}}">Cifra de César</a>
             <a href="{{url_for('substituicao')}}">Substituição</a>
-            <a href="{{url_for('transformacao')}}">Transformação</a>
-            <a href="contatos.html">Contatos</a>
+            <a href="{{url_for('transposicao')}}">Transposição</a>
+            <a href="{{url_for('contatos')}}">Contatos</a>
             <button class="cta" id="cta">Quero Praticar!</button>
         </nav>
     </header>
@@ -38,22 +38,100 @@
     </main>
 
     <section id="about" class="info">
-  <div class="info-grid">
-    <div class="card glass small">
-      <h3>O que é?</h3>
-      <p>Uma demonstração prática de criptografia e segurança digital, com foco em aprendizado e interatividade.</p>
+      <div class="info-grid">
+        <div class="card glass small">
+          <h3>O que é?</h3>
+          <p>Uma plataforma interativa desenvolvida para demonstrar, de forma prática, os fundamentos da
+                    criptografia clássica e moderna.
+                    O CryptoLearn permite compreender como os algoritmos de segurança atuam na proteção de dados, unindo
+                    aprendizado teórico e aplicação real.</p>
+          <a href="{{url_for('historia')}}" class="learn-more">Saiba mais →</a>
+        </div>
+
+        <div class="card glass large">
+          <h3>Performance</h3>
+          <p>O sistema foi projetado com foco em desempenho e otimização, utilizando tecnologias leves e
+            eficientes como Python e Flask.
+            Essa estrutura garante rapidez na execução dos algoritmos de criptografia e descriptografia,
+            assegurando uma experiência fluida e precisa ao usuário.</p>
+          <img src="{{url_for('static', filename='imagens/gif-card1.gif')}}" alt="Demonstração de performance" class="img-card">]
+          <a href="{{url_for('historia')}}" class="learn-more">Saiba mais →</a>
+        </div>
+
+        <div class="card glass small">
+          <h3>Aplicações e Segurança</h3>
+          <p>Mais do que uma ferramenta de aprendizado, o CryptoLearn reforça a importância da segurança digital
+            no cotidiano.
+            Com base em métodos de criptografia como a Cifra de César, Substituição e Transposição, o projeto
+            demonstra como a proteção de informações é essencial em sistemas modernos de comunicação e
+            armazenamento.</p>
+          <a href="{{url_for('historia')}}" class="learn-more">Saiba mais →</a>
+        </div>
+      </div>
+    </section>
+
+<br><br><br><br><br><br>
+
+<section id="intro" class="intro-full">
+  <div class="intro-overlay">
+    <div class="intro-text">
+      <h2>O futuro da <span>Segurança Digital</span> começa aqui!</h2>
+      <p>
+        Com o avanço da tecnologia e o aumento das ameaças virtuais,
+        compreender os princípios da criptografia é essencial. O
+        <span><strong>CryptoLearn</strong></span> surge como uma ferramenta educacional que une
+        teoria e prática, permitindo entender e visualizar algoritmos de
+        proteção de dados em tempo real.
+      </p><br>
+      <p class="sub">
+        Desenvolvido com base em metodologias modernas e linguagens como
+        <strong><span>Python</span></strong> e <strong><span>Flask</span></strong>, o projeto busca
+        democratizar o conhecimento sobre segurança digital.
+      </p>
+      <button class="btn btn-primary">Saiba mais</button>
+    </div>
+  </div>
+</section>
+
+<section id="cryptos" class="crypto-section">
+  <h2 class="section-title">Métodos de Criptografia</h2>
+  <p class="section-subtitle">Aprenda na prática como funcionam as principais técnicas utilizadas na segurança digital.</p>
+
+  <div class="crypto-cards">
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/8.png')}}" alt="Cifra de César" class="crypto-img" />
+        <span class="crypto-tag">Clássica</span>
+      </div>
+      <div class="card-body">
+        <h3>Cifra de César</h3>
+        <p>Uma das técnicas mais antigas da história, baseia-se na substituição de letras por outras deslocadas no alfabeto.</p>
+        <button class="btn btn-primary">Explorar</button>
+      </div>
     </div>
 
-    <div class="card glass large">
-      <h3>Performance</h3>
-      <p>Implementações otimizadas, renderização eficiente e suporte completo a dispositivos móveis.</p>
-      <img src="{{url_for('static', filename='imagens/gif-card1.gif')}}" alt="" class="img-card">
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/10.png')}}" alt="Substituição" class="crypto-img" />
+        <span class="crypto-tag">Simples e eficaz</span>
+      </div>
+      <div class="card-body">
+        <h3>Substituição</h3>
+        <p>Transforma cada caractere de uma mensagem por outro símbolo, criando uma comunicação mais segura e codificada.</p>
+        <button class="btn btn-primary">Explorar</button>
+      </div>
     </div>
 
-    <div class="card glass small">
-      <h3>Mobile e Acessibilidade</h3>
-      <p>Nosso design adaptável garante uma experiência fluida e envolvente em qualquer dispositivo — do desktop ao celular.
-      O CryptoLearn é responsivo, acessível e feito para acompanhar você onde quer que esteja.</p>
+    <div class="crypto-card">
+      <div class="card-header">
+        <img src="{{url_for('static', filename='imagens/9.png')}}" alt="Transposição" class="crypto-img" />
+        <span class="crypto-tag">Avançada</span>
+      </div>
+      <div class="card-body">
+        <h3>Transposição</h3>
+        <p>Reorganiza a posição dos caracteres sem alterá-los, tornando o texto criptografado impossível de ler sem a chave correta.</p>
+        <button class="btn btn-primary">Explorar</button>
+      </div>
     </div>
   </div>
 </section>
@@ -63,7 +141,6 @@
         <p>© cryptoguard — built with spline</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 
 </html>

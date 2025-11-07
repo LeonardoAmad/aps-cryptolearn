@@ -12,11 +12,11 @@
   <header class="nav">
     <a href="{{url_for('index')}}"><div class="logo">Crypto<span>Learn</span></div></a>
     <nav>
-      <a href="historia.html">História</a>
+      <a href="{{url_for('historia')}}">História</a>
       <a href="{{url_for('cesar')}}" class="active">Cifra de César</a>
       <a href="{{url_for('substituicao')}}">Substituição</a>
-      <a href="{{url_for('transformacao')}}">Transformação</a>
-      <a href="contatos.html">Contatos</a>
+      <a href="{{url_for('transposicao')}}">Transposição</a>
+      <a href="{{url_for('contatos')}}">Contatos</a>
       <button class="cta" id="cta">Quero Praticar!</button>
     </nav>
   </header>
@@ -140,8 +140,8 @@
         </div>
 
         <div class="btn-group">
-          <button type="submit" class="btn btn-primary">Criptografar</button>
-          <button type="button" class="btn btn-ghost" id="btn-decriptar">Descriptografar</button>
+          <button type="submit" name="operacao" value="criptografar" class="btn btn-primary">Criptografar</button>
+          <button type="submit" name="operacao" value="descriptografar" class="btn btn-ghost" id="btn-descriptografar">Descriptografar</button>
         </div>
       </form>
 
