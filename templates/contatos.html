@@ -1,10 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<!doctype html>
+<html lang="pt-br">
 
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Substituição - CryptoLearn</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  <link rel="shortcut icon" href="{{url_for('static', filename='imagens/cards/logo.png')}}"/>
+</head>
+
+<body>
+  <header class="nav">
+    <a href="{{url_for('index')}}"><div class="logo">Crypto<span>Learn</span></div></a>
+    <nav>
+      <a href="{{url_for('historia')}}">História</a>
+      <a href="{{url_for('cesar')}}" class="active">Cifra de César</a>
+      <a href="{{url_for('substituicao')}}">Substituição</a>
+      <a href="{{url_for('transposicao')}}">Transposição</a>
+      <a href="{{url_for('contatos')}}">Contatos</a>
+      <button class="cta" id="cta">Quero Praticar!</button>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <section class="hero-left">
+      <h1>Conheça as Mentes do <br><span>CryptoLearn!</span></h1>
+      <p>Descubra quem deu vida ao projeto e transformou ideias em uma experiência <br>interativa sobre criptografia e tecnologia.</p>
+      <br>
+
+      <div class="actions">
+        <a href="#cifra-cesar"><button class="btn btn-primary">Experimentar</button></a>
+      </div>
+    </section>
+
+    <section class="hero-right">
+      <img src="{{url_for('static', filename='imagens/bg-home/bg-home11.png')}}" alt="Cifra de César" class="hero-image">
+    </section>
+  </main>
+
+  <br><br><br><br>
+  <section id="cryptos" class="crypto-section">
+    <h2 class="section-title">Contatos dos <span>Devs</span></h2>
+    <p class="section-subtitle">Conheça e entre em contato com os Desenvolvedores da APS</p>
+
+    <div class="crypto-cards">
+      <div class="crypto-card">
+        <div class="card-header">
+          <img src="{{url_for('static', filename='imagens/ju.png')}}" alt="Cifra de Substituição" class="crypto-img" />
+          <span class="crypto-tag">R8507G9</span>
+        </div>
+        <div class="card-body">
+          <h3>Julia <span>Giacomello</span></h3>
+          <p>
+            • <strong>Email:</strong> juliagiacomello11@gmail.com <br>
+            • <strong>GitHub:</strong> Julia Giacomello <br>
+            • <strong>Instituição:</strong> Universidade Paulista <br>
+            • <strong>Profissão:</strong> Estagiária de Full Stack at Bosch Digital
+          </p>
+          <a href="https://www.linkedin.com/in/julia-giacomello-102584251/" class="learn-more">LinkedIn →</a>
+        </div>
+      </div>
+
+      <div class="crypto-card">
+        <div class="card-header">
+          <img src="{{url_for('static', filename='imagens/leo.jpeg')}}" alt="Funcionamento" class="crypto-img" />
+          <span class="crypto-tag">R8507E2</span>
+        </div>
+        <div class="card-body">
+          <h3>Leonardo <span>Amad</span></h3>
+          <p>
+            • <strong>Email:</strong> leonardo.amad50@gmail.com <br>
+            • <strong>GitHub:</strong> Leonardo Amad <br>
+            • <strong>Instituição:</strong> Universidade Paulista <br>
+            • <strong>Profissão:</strong> Estagiário de TI at Bosch Digital
+          </p>
+          <a href="https://www.linkedin.com/in/leonardo-amad/" class="learn-more">LinkedIn →</a>
+        </div>
+      </div>
+
+      <div class="crypto-card">
+        <div class="card-header">
+          <img src="{{url_for('static', filename='imagens/taina.jpg')}}" alt="Exemplo Prático" class="crypto-img" />
+          <span class="crypto-tag">T214157</span>
+        </div>
+        <div class="card-body">
+          <h3>Tainá <span>Oliveira</span></h3>
+          <p>
+            • <strong>Email:</strong> ftjf154tainaoliv@gmail.com <br>
+            • <strong>GitHub:</strong> Taina Oliveira <br>
+            • <strong>Instituição:</strong> Universidade Paulista <br>
+            • <strong>Profissão:</strong> Estagiária de DevOPS at Bosch Digital
+          </p>
+          <a href="https://www.linkedin.com/in/tain%C3%A1-fernandes-de-oliveira-71217220a/" class="learn-more">LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© APS 2025 - 2° Semestre - UNIP</p>
+  </footer>
 </body>
+
 </html>
