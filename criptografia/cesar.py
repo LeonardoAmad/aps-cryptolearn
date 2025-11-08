@@ -23,46 +23,9 @@ def cifra_cesar(texto, chave, operacao='criptografar'):
     return resultado
 
 
-def main():
-    print("===--- CIFRA DE CÉSAR ---===")
-    print("1. Criptografar")
-    print("2. Descriptografar")
-
-    while True:
-        try:
-            opcao = input("\nEscolha uma opção (1-3): ").strip()
-
-            if opcao == '3':
-                print("Saindo do programa...")
-                break
-
-            if opcao not in ['1', '2']:
-                print("Opção inválida! Escolha 1, 2 ou 3.")
-                continue
-
-            texto = input("Digite o texto: ")
-
-            while True:
-                try:
-                    chave = int(input("Digite a chave (número inteiro): "))
-                    break
-                except ValueError:
-                    print("Por favor, digite um número inteiro válido!")
-
-            if opcao == '1':
-                resultado = cifra_cesar(texto, chave, 'criptografar')
-                print(f"\n Texto criptografado: {resultado}")
-            else:
-                resultado = cifra_cesar(texto, chave, 'descriptografar')
-                print(f"\n Texto descriptografado: {resultado}")
-
-            continuar = input("\nDeseja fazer outra operação? (sim/nao): ").strip().lower()
-            if continuar != 'sim':
-                print("Saindo do programa...")
-                break
-
-        except KeyboardInterrupt:
-            print("\n\nPrograma interrompido pelo usuário.")
-            break
-        except Exception as e:
-            print(f"Ocorreu um erro: {e}")
+def validar_chave_cesar(chave):
+    try:
+        chave = int(chave)
+        return chave, None
+    except ValueError:
+        return None, "A chave deve ser um número inteiro."

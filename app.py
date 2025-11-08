@@ -20,12 +20,10 @@ def contatos():
 @app.route('/cesar', methods=['GET','POST'])
 def cesar():
     if request.method == 'POST':
-        # Pega os dados do formulário
         mensagem = request.form.get('mensagem', '')
         chave = int(request.form.get('chave', 0))
         operacao = request.form.get('operacao', 'criptografar')
 
-        # Chama a função de criptografia
         resultado = cifra_cesar(mensagem, chave, operacao)
 
         return render_template(
