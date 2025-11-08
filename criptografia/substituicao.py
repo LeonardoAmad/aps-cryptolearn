@@ -34,68 +34,12 @@ def gerar_chave_aleatoria():
     random.shuffle(chave_aleatoria)
     return ''.join(chave_aleatoria)
 
-def main_substituicao():
-    print("===--- CIFRA DE SUBSTITUIÇÃO ---===")
-    print("1. Criptografar")
-    print("2. Descriptografar")
-    print("3. Sair")
-
-    while True:
-        try:
-            opcao = input("\nEscolha uma opção (1-3): ").strip()
-
-            if opcao == '3':
-                print("Saindo do programa...")
-                break
-
-            if opcao not in ['1', '2']:
-                print("Opção inválida! Escolha 1, 2 ou 3.")
-                continue
-
-            texto = input("Digite o texto: ")
-
-            if opcao == '1':
-                chave = gerar_chave_aleatoria()
-                print(f"\n Chave gerada: {chave}")
-                print("GUARDE ESTA CHAVE PARA DESCRIPTOGRAFAR!")
-
-                resultado = cifra_substituicao(texto, chave, 'criptografar')
-                print(f"\n Texto criptografado: {resultado}")
-
-            else:
-                print("\nPara descriptografar, digite a chave de 26 letras:")
-                print("Exemplo: QWERTYUIOPASDFGHJKLZXCVBNM")
-
-                while True:
-                    chave = input("Digite a chave: ").strip().upper()
-
-                    if len(chave) != 26:
-                        print("A chave deve ter exatamente 26 letras!")
-                        continue
-
-                    if not chave.isalpha():
-                        print("A chave deve conter apenas letras!")
-                        continue
-
-                    if len(set(chave)) != 26:
-                        print("A chave não pode ter letras repetidas!")
-                        continue
-                    break
-
-                resultado = cifra_substituicao(texto, chave, 'descriptografar')
-                print(f"\n Texto descriptografado: {resultado}")
-
-            continuar = input("\n Deseja fazer outra operação? (sim/nao): ").strip().lower()
-            if continuar != 'sim':
-                print("Saindo do programa...")
-                break
-
-        except KeyboardInterrupt:
-            print("\n\nPrograma interrompido pelo usuário.")
-            break
-        except Exception as e:
-            print(f"Ocorreu um erro: {e}")
-
-
-if __name__ == "__main__":
-    main_substituicao()
+def validar_chave_substituicao(chave):
+    chave = chave.upper()
+    if len(chave) != 26:
+        return None, "A chave deve ter exatamente 26 letras."
+    if not chave.isalpha():
+        return None, "A chave deve conter apenas letras."
+    if len(set(chave)) != 26:
+        return None, "A chave não pode ter letras repetidas."
+    return chave, None

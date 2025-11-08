@@ -19,12 +19,13 @@ def cifra_transposicao(texto, chave, operacao='criptografar'):
     else:
         num_linhas = len(texto) // tamanho_chave
         matriz = [[''] * tamanho_chave for _ in range(num_linhas)]
-
         posicao = 0
+
         for coluna in chave:
             for linha in range(num_linhas):
-                matriz[linha][coluna] = texto[posicao]
-                posicao += 1
+                if posicao < len(texto):
+                    matriz[linha][coluna] = texto[posicao]
+                    posicao += 1
 
         for linha in matriz:
             resultado += ''.join(linha)
@@ -44,40 +45,3 @@ def validar_chave(chave_str):
 
     except ValueError:
         return None, "Use formato: 2,0,1"
-
-
-def main():
-    print("===-- CIFRA DE TRANSPOSIÇÃO --===")
-
-    while True:
-        opcao = input(" 1.Criptografar \n 2.Descriptografar \n 3.Sair\nOpção: ").strip()
-
-        if opcao == '3':
-            print("Até logo!")
-            break
-        if opcao not in ['1', '2']:
-            continue
-
-        texto = input("Texto: ")
-
-        while True:
-            chave_str = input("Chave (ex: 2,0,1): ").strip()
-            chave, erro = validar_chave(chave_str)
-            if not erro:
-                break
-            print(erro)
-
-        if opcao == '1':
-            resultado = cifra_transposicao(texto, chave, 'criptografar')
-            print(f"\nCriptografado: {resultado}")
-        else:
-            resultado = cifra_transposicao(texto, chave, 'descriptografar')
-            print(f"\nDescriptografado: {resultado}")
-
-        if input("\nContinuar? (sim/nao): ").lower() != 'sim':
-            print("saindo do programa...")
-            break
-
-
-if __name__ == '__main__':
-    main()
