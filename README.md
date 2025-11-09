@@ -9,7 +9,7 @@ Our goal is to turn complex cryptographic concepts into something fun and easy t
 ## 🎬 Quick Front-End Presentation
 
 <center>
-> ![CryptoLearn Demo](static/imagens/presentation.gif)
+![CryptoLearn Demo](static/imagens/presentation.gif)
 
 ![CryptoLearn Demo](static/imagens/overview-gif.gif)
 </center>
