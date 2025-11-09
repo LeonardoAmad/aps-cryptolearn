@@ -9,9 +9,9 @@ Our goal is to turn complex cryptographic concepts into something fun and easy t
 
 ## 🎬 Quick Front-End Presentation
 
-> *(Insert your project video demo here — e.g., a YouTube or Loom link)*
+> (static/imagens/)
 
-![CryptoLearn Demo](static/imagens/overview-gif.gif)
+![CryptoLearn Demo](static/imagens/presentation.mp4)
 
 ---
 
