@@ -1,5 +1,5 @@
 # 🔐 CryptoLearn — Interactive Cryptography Learning Platform
-
+<center>
 When we started this project, we wanted to make the **world of cryptography more accessible and visual**. Many people know that encryption protects their messages and passwords, but few understand *how* it actually works.  
 That’s how **CryptoLearn** was born — a web application that brings together **education, interactivity, and design** to teach the foundations of **classic encryption techniques**, such as **Caesar Cipher**, **Substitution Cipher**, and **Transposition Cipher**.
 
@@ -8,7 +8,6 @@ Our goal is to turn complex cryptographic concepts into something fun and easy t
 ---
 ## 🎬 Quick Front-End Presentation
 
-<center>
 ![CryptoLearn Demo](static/imagens/presentation.gif)
 
 ![CryptoLearn Demo](static/imagens/overview-gif.gif)
