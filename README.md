@@ -6,9 +6,9 @@ That’s how **CryptoLearn** was born — a web application that brings together
 Our goal is to turn complex cryptographic concepts into something fun and easy to understand, using **real-time simulations** that show how messages are encoded and decoded.
 
 ---
-<center>
 ## 🎬 Quick Front-End Presentation
 
+<center>
 > ![CryptoLearn Demo](static/imagens/presentation.gif)
 
 ![CryptoLearn Demo](static/imagens/overview-gif.gif)
