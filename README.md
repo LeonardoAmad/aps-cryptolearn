@@ -81,9 +81,9 @@ The long-term vision is to expand the platform to include **modern encryption al
 ## 🧾 Project Information
 
 📘 **Course:** Embedded Systems / Information Security  
-🏫 **Institution:** UNIP  
+🏫 **Institution:** Universidade Paulista, Brazil  
 📆 **Semester:** 2° Semester — 2025  
-👨‍💻 **Developed by:** Leonardo Amad  
+👨‍💻 **Developed by:** Julia Giacomello, Leonardo Amad and Taina Oliveira
 
 ---
 
