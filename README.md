@@ -1,17 +1,23 @@
 # 🔐 CryptoLearn — Interactive Cryptography Learning Platform
-<center>
-When we started this project, we wanted to make the **world of cryptography more accessible and visual**. Many people know that encryption protects their messages and passwords, but few understand *how* it actually works.  
+
+<div align="center">
+
+When we started this project, we wanted to make the **world of cryptography more accessible and visual**.  
+Many people know that encryption protects their messages and passwords, but few understand *how* it actually works.  
 That’s how **CryptoLearn** was born — a web application that brings together **education, interactivity, and design** to teach the foundations of **classic encryption techniques**, such as **Caesar Cipher**, **Substitution Cipher**, and **Transposition Cipher**.
 
 Our goal is to turn complex cryptographic concepts into something fun and easy to understand, using **real-time simulations** that show how messages are encoded and decoded.
 
 ---
+
 ## 🎬 Quick Front-End Presentation
 
 ![CryptoLearn Demo](static/imagens/presentation.gif)
 
-![CryptoLearn Demo](static/imagens/overview-gif.gif)
-</center>
+![CryptoLearn Overview](static/imagens/overview-gif.gif)
+
+</div>
+
 ---
 
 ## 🧠 Objective
@@ -23,7 +29,7 @@ Beyond education, it also aims to raise awareness about **data protection** and 
 
 ## ⚙️ Technologies Used
 
-- 🐍 **Python 3**
+- 🐍 **Python 3**  
 - 🌐 **Flask** — for backend logic and route management  
 - 💻 **HTML5 & CSS3** — for structure and responsive design  
 - ⚡ **JavaScript** — for interactivity  
@@ -36,10 +42,10 @@ Beyond education, it also aims to raise awareness about **data protection** and 
 ✔️ Modern and intuitive interface  
 ✔️ Theoretical explanations for each cipher type  
 ✔️ Interactive simulators to encrypt and decrypt messages  
-✔️ Implementation of the three main classical ciphers:
-- Caesar Cipher  
-- Substitution Cipher  
-- Transposition Cipher  
+✔️ Implementation of the three main classical ciphers:  
+- **Caesar Cipher**  
+- **Substitution Cipher**  
+- **Transposition Cipher**
 
 ---
 
@@ -86,5 +92,9 @@ The long-term vision is to expand the platform to include **modern encryption al
 
 ---
 
+<div align="center">
+
 > *"Learning how to protect information is the first step to understanding the digital world."*  
-— **CryptoLearn Team**
+> — **CryptoLearn Team**
+
+</div>
