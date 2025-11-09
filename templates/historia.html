@@ -5,19 +5,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>CryptoLearn - História da Criptografia</title>
-  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
-  <link rel="shortcut icon" href="{{url_for('static', filename='imagens/cards/logo.png')}}"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 
 <body>
   <header class="nav">
-    <a href="{{url_for('index')}}"><div class="logo">Crypto<span>Learn</span></div></a>
+    <a href="{{ url_for('index') }}"><div class="logo">Crypto<span>Learn</span></div></a>
     <nav>
-      <a href="{{url_for('historia')}}">História</a>
-      <a href="{{ url_for('cesar')}}">Cifra de César</a>
-      <a href="{{ url_for('substituicao')}}">Substituição</a>
-      <a href="{{ url_for('transposicao')}}">Transposição</a>
-      <a href="{{ url_for('contatos')}}">Contatos</a>
+      <a href="{{ url_for('index') }}">Início</a>
+      <a href="{{ url_for('cesar') }}">Cifra de César</a>
+      <a href="{{ url_for('substituicao') }}">Substituição</a>
+      <a href="{{ url_for('transposicao') }}">Transposição</a>
+      <a href="{{ url_for('contatos') }}">Contatos</a>
       <button class="cta" id="cta">Explorar</button>
     </nav>
   </header>
@@ -25,14 +24,14 @@
   <main class="hero history-hero">
     <section class="hero-left">
       <h1>A <span>Jornada</span> da Criptografia</h1>
-      <p>Uma viagem no tempo desde os códigos secretos do Império Romano até os algoritmos que protegem </br> o mundo digital moderno.</p>
+      <p>Uma viagem no tempo desde os códigos secretos do Império Romano até os algoritmos que protegem o mundo digital moderno.</p>
       <div class="actions">
         <a href="#epocas"><button class="btn btn-primary">Iniciar Jornada</button></a>
       </div>
     </section>
 
     <section class="hero-right">
-      <img src="{{url_for('static', filename='imagens/bg-home/bg-home10.png')}}" alt="Robô narrador" class="hero-image">
+      <img src="{{ url_for('static', filename='imagens/bg-home/bg-home10.png') }}" alt="Robô narrador" class="hero-image">
     </section>
   </main>
 
@@ -47,7 +46,7 @@
           <p>Na Roma Antiga e no Egito, códigos secretos eram usados em comunicações e inscrições religiosas. Júlio César criou um método simples de substituição, deslocando letras do alfabeto para proteger mensagens militares.</p>
         </div>
         <div class="epoca-imagem">
-          <img src="{{url_for('static', filename='imagens/robos/robo-antigo.png')}}" alt="Robô antigo">
+          <img src="{{ url_for('static', filename='imagens/robos/robo-antigo.png') }}" alt="Robô antigo">
         </div>
       </div>
 
@@ -57,7 +56,7 @@
           <p>Durante a Idade Média, monges e diplomatas desenvolveram cifras mais complexas. Leon Battista Alberti criou o disco de cifras — o primeiro sistema polialfabético — abrindo o caminho para a criptografia mecânica.</p>
         </div>
         <div class="epoca-imagem">
-          <img src="{{url_for('static', filename='imagens/robos/robo-medieval.png')}}" alt="Robô medieval">
+          <img src="{{ url_for('static', filename='imagens/robos/robo-medieval.png') }}" alt="Robô medieval">
         </div>
       </div>
 
@@ -67,72 +66,141 @@
           <p>No século XX, a criptografia se transformou em ciência. A Máquina Enigma, usada na Segunda Guerra, e os algoritmos RSA e AES marcaram o início da era digital, garantindo segurança na comunicação global.</p>
         </div>
         <div class="epoca-imagem">
-          <img src="{{url_for('static', filename='imagens/robos/robo-moderno.png')}}" alt="Robô moderno">
+          <img src="{{ url_for('static', filename='imagens/robos/robo-moderno.png') }}" alt="Robô moderno">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="timeline-modern">
-  <h1 class="timeline-title">Linha do Tempo da <span>Criptografia</span></h1>
-  <div class="timeline-wrapper">
-
-    <div class="timeline-item up">
-      <div class="circle">50 a.C</div>
-      <h3>Cifra de César</h3>
-      <p>Um dos primeiros métodos de substituição, usado por Júlio César para proteger mensagens militares.</p>
-    </div>
-
-    <div class="timeline-item down">
-      <div class="circle">1466</div>
-      <h3>Disco de Alberti</h3>
-      <p>Leon Battista Alberti cria o primeiro sistema polialfabético, base da criptografia moderna.</p>
-    </div>
-
-    <div class="timeline-item up">
-      <div class="circle">1914–1945</div>
-      <h3>Máquina Enigma</h3>
-      <p>Usada na Segunda Guerra Mundial; decifrada por Alan Turing, marcando a origem da computação moderna.</p>
-    </div>
-
-    <div class="timeline-item down">
-      <div class="circle">1977</div>
-      <h3>Algoritmo RSA</h3>
-      <p>Primeiro método de chave pública, usado até hoje em sistemas de autenticação e transações online.</p>
-    </div>
-
-    <div class="timeline-item up">
-      <div class="circle">2009</div>
-      <h3>Blockchain</h3>
-      <p>A tecnologia do Bitcoin revolucionou a segurança digital com criptografia descentralizada.</p>
-    </div>
-  </div>
-  </section>
-
   <section class="figuras-section">
-    <h1>Mentes que Mudaram a <span>História</span></h1>
+    <h1>Mentes que Mudaram a <span>História da Criptografia</span></h1>
     <div class="figuras-grid">
       <div class="figura-card">
-        <img src="{{url_for('static', filename='imagens/cards/cesar.png')}}" alt="Júlio César">
+        <img src="{{ url_for('static', filename='imagens/cards/cesar.png') }}" alt="Júlio César">
         <h2>Júlio <span>César</span></h2>
         <p>Criador de uma das primeiras cifras da história, a base de todo o pensamento criptográfico.</p>
       </div>
       <div class="figura-card">
-        <img src="{{url_for('static', filename='imagens/cards/leon.png')}}" alt="Leon Battista Alberti">
+        <img src="{{ url_for('static', filename='imagens/cards/leon.png') }}" alt="Leon Battista Alberti">
         <h2>Leon <span>Alberti</span></h2>
         <p>Inventor do disco de cifras, considerado o pai da criptografia polialfabética.</p>
       </div>
       <div class="figura-card">
-        <img src="{{url_for('static', filename='imagens/cards/alan.png')}}" alt="Alan Turing">
+        <img src="{{ url_for('static', filename='imagens/cards/alan.png') }}" alt="Alan Turing">
         <h2>Alan <span>Turing</span></h2>
         <p>Matemático britânico que decifrou a Enigma e lançou as bases da computação moderna.</p>
+      </div>
+      <div class="figura-card">
+        <img src="{{ url_for('static', filename='imagens/cards/diffie.png') }}" alt="Whitfield Diffie">
+        <h2>Whitfield <span>Diffie</span></h2>
+        <p>Criador do Diffie-Hellman Key Exchange, primeiro sistema prático de troca de chaves públicas.</p>
+      </div>
+      <div class="figura-card">
+        <img src="{{ url_for('static', filename='imagens/cards/bennett.png') }}" alt="Charles Bennet">
+        <h2>Charles <span>Bennet</span></h2>
+        <p>Criador do protocolo BB84, base da criptografia quântica e comunicação ultra-segura.</p>
       </div>
     </div>
   </section>
 
+  <section class="intro-full5">
+    <div class="intro-overlay">
+      <div class="intro-text">
+        <h2>A Criptografia na <span><br>Segunda Guerra Mundial</span></h2>
+        <p>
+          Durante a Segunda Guerra Mundial, a criptografia tornou-se uma arma silenciosa,
+          tão poderosa quanto tanques e aviões. As nações envolvidas travavam não apenas
+          batalhas em campos e oceanos, mas também nas sombras — em uma guerra de códigos,
+          cifras e segredos militares. A Alemanha Nazista utilizava a <strong>Máquina Enigma</strong>,
+          um equipamento eletromecânico capaz de gerar milhões de combinações de mensagens cifradas,
+          consideradas impossíveis de decifrar à época.
+        </p><br>
+        <p class="sub">
+          No entanto, o gênio britânico <strong>Alan Turing</strong> e sua equipe em Bletchley Park
+          conseguiram quebrar o código da Enigma, utilizando métodos matemáticos e máquinas precursoras
+          dos computadores modernos. Essa conquista foi essencial para que os Aliados antecipassem ataques,
+          salvando milhares de vidas e encurtando o conflito em anos.
+        </p><br>
+        <button class="btn btn-primary">Saiba mais</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="cryptos" class="crypto-section">
+    <h2 class="section-title">Criptografia no <span>Dia a Dia</span></h2>
+    <p class="section-subtitle">A Criptografia está mais presente na nossa vida do que você imagina!</p>
+
+    <div class="crypto-cards">
+      <div class="crypto-card">
+        <div class="card-header">
+          <img src="{{ url_for('static', filename='imagens/robos/robo-mensagens.png') }}" alt="Mensagens" class="crypto-img" />
+          <span class="crypto-tag">Mensagens</span>
+        </div>
+        <div class="card-body">
+          <h3>Mensagens Instantâneas</h3>
+          <p>A maioria dos aplicativos de chat usa criptografia ponta a ponta para que só o remetente e o destinatário leiam as mensagens, impedindo que provedores ou atacantes interceptem o conteúdo.</p>
+        </div>
+      </div>
+
+      <div class="crypto-card">
+        <div class="card-header">
+          <img src="{{ url_for('static', filename='imagens/robos/robo-banco.png') }}" alt="Bancos" class="crypto-img" />
+          <span class="crypto-tag">Bancos</span>
+        </div>
+        <div class="card-body">
+          <h3>Bancos e Pagamentos</h3>
+          <p>Transações financeiras na web são protegidas por protocolos criptográficos (SSL/TLS) e algoritmos como RSA/AES, garantindo segurança e integridade das informações.</p>
+        </div>
+      </div>
+
+      <div class="crypto-card">
+        <div class="card-header">
+          <img src="{{ url_for('static', filename='imagens/robos/robo-nuvem.png') }}" alt="Nuvem" class="crypto-img" />
+          <span class="crypto-tag">Armazenamento</span>
+        </div>
+        <div class="card-body">
+          <h3>Backup e Nuvem</h3>
+          <p>Serviços de nuvem encriptam dados em trânsito e em repouso; alguns permitem que o usuário gerencie sua própria chave, garantindo total controle sobre os arquivos.</p>
+        </div>
+      </div>
+
+      <div class="crypto-card">
+        <div class="card-header">
+          <img src="{{ url_for('static', filename='imagens/robos/robo-phone.png') }}" alt="Autenticação" class="crypto-img" />
+          <span class="crypto-tag">Autenticação</span>
+        </div>
+        <div class="card-body">
+          <h3>Smartphones</h3>
+          <p>Celulares utilizam criptografia de disco e autenticação biométrica, protegendo senhas, fotos e dados pessoais contra acessos não autorizados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro-full6">
+    <div class="intro-overlay">
+      <div class="intro-text">
+        <h2>O <span>Futuro da Criptografia</span></h2>
+        <p>
+          À medida que a tecnologia avança, a criptografia também evolui para enfrentar
+          novos desafios. A chegada da <strong>computação quântica</strong> promete quebrar
+          muitos dos sistemas de segurança atuais, forçando o desenvolvimento de uma nova
+          geração de algoritmos resistentes a esse poder computacional.
+        </p><br>
+        <p class="sub">
+          Surge então a chamada <strong>criptografia pós-quântica</strong> — um campo em expansão
+          que busca criar códigos impossíveis de serem decifrados, mesmo por computadores quânticos.
+          Além disso, conceitos como a <strong>criptografia homomórfica</strong> e a
+          <strong>blockchain</strong> continuam revolucionando áreas como segurança de dados,
+          moedas digitais e autenticação digital, garantindo um futuro mais seguro para a informação.
+        </p><br>
+        <button class="btn btn-primary">Explorar o Futuro</button>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
-    <p>© APS 2025 - 2° Semester - UNIP</p>
+    <p>© APS 2025 - 2° Semestre - UNIP</p>
   </footer>
 </body>
 </html>
