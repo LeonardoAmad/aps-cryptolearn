@@ -11,7 +11,7 @@ Our goal is to turn complex cryptographic concepts into something fun and easy t
 
 > *(Insert your project video demo here — e.g., a YouTube or Loom link)*
 
-![CryptoLearn Demo](https://github.com/yourusername/CryptoLearn/demo.gif)
+![CryptoLearn Demo](static/imagens/overview-gif.gif)
 
 ---
 
