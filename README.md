@@ -1,38 +1,91 @@
-# 🔐 CryptoLearn — APS de Criptografia e Segurança Digital
+# 🔐 CryptoLearn — Interactive Cryptography Learning Platform
 
-**CryptoLearn** é uma aplicação web desenvolvida em **Python (Flask)** e **HTML/CSS**, criada como parte da **Atividade Prática Supervisionada (APS)** da disciplina de **Sistemas Embarcados / Segurança da Informação**.  
-O projeto tem como objetivo **ensinar, de forma interativa e visual, os fundamentos da criptografia clássica**, permitindo ao usuário experimentar os métodos de **Cifra de César**, **Cifra de Substituição** e **Cifra de Transposição**.
+When we started this project, we wanted to make the **world of cryptography more accessible and visual**. Many people know that encryption protects their messages and passwords, but few understand *how* it actually works.  
+That’s how **CryptoLearn** was born — a web application that brings together **education, interactivity, and design** to teach the foundations of **classic encryption techniques**, such as **Caesar Cipher**, **Substitution Cipher**, and **Transposition Cipher**.
 
----
-
-## 🧠 Objetivo do Projeto
-
-A proposta do **CryptoLearn** é promover o **aprendizado prático sobre criptografia**, mostrando como técnicas históricas ainda fundamentam os sistemas modernos de segurança digital.  
-O projeto também busca conscientizar sobre a importância da **proteção de dados** em um mundo cada vez mais conectado.
+Our goal is to turn complex cryptographic concepts into something fun and easy to understand, using **real-time simulations** that show how messages are encoded and decoded.
 
 ---
 
-## ⚙️ Tecnologias Utilizadas
+## 🎬 Quick Front-End Presentation
+
+> *(Insert your project video demo here — e.g., a YouTube or Loom link)*
+
+![CryptoLearn Demo](https://github.com/yourusername/CryptoLearn/demo.gif)
+
+---
+
+## 🧠 Objective
+
+The main goal of **CryptoLearn** is to **promote practical learning about cryptography** and demonstrate how ancient methods inspired the **modern security systems** that protect our data today.  
+Beyond education, it also aims to raise awareness about **data protection** and **digital security** in an increasingly connected world.
+
+---
+
+## ⚙️ Technologies Used
 
 - 🐍 **Python 3**
-- 🌐 **Flask** (para backend e rotas web)
-- 💻 **HTML5 e CSS3**
-- 🎨 **Design Responsivo e Estilo Futurista**
-- ⚡ **JavaScript (interatividade básica)**
+- 🌐 **Flask** — for backend logic and route management  
+- 💻 **HTML5 & CSS3** — for structure and responsive design  
+- ⚡ **JavaScript** — for interactivity  
+- 🎨 **Futuristic and minimalist UI design**
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Functionalities
 
-✅ Interface moderna e intuitiva  
-✅ Explicações teóricas sobre cada tipo de cifra  
-✅ Simulador interativo para criptografar e descriptografar mensagens  
-✅ Aplicação das três técnicas clássicas:
-- Cifra de César  
-- Cifra de Substituição  
-- Cifra de Transposição  
+✔️ Modern and intuitive interface  
+✔️ Theoretical explanations for each cipher type  
+✔️ Interactive simulators to encrypt and decrypt messages  
+✔️ Implementation of the three main classical ciphers:
+- Caesar Cipher  
+- Substitution Cipher  
+- Transposition Cipher  
 
 ---
 
-## 🧩 Estrutura do Projeto
+## 💡 Justification
 
+**CryptoLearn** was created to make the concept of **cryptography understandable to everyone**.  
+While most educational platforms focus on theory, we wanted to create a **hands-on and visual approach** where users can experiment and instantly see the results of their encryptions.  
+By bridging history and technology, CryptoLearn helps users grasp **how ancient ciphers evolved into today’s encryption algorithms**.
+
+---
+
+## 🎯 Goal
+
+From the start, our goal has been to build a **didactic and engaging experience** for students and enthusiasts interested in cybersecurity.  
+We aim to be a **reference in educational cryptography tools**, combining simplicity, design, and functionality in one platform.
+
+---
+
+## 🧩 Materials and Methods
+
+The project was developed using:
+- **HTML** for the page structure  
+- **CSS** for layout and futuristic styling  
+- **JavaScript** for dynamic content  
+- **Flask (Python)** for backend logic and cipher algorithms  
+
+Each cipher (Caesar, Substitution, and Transposition) was implemented as a **modular Python script**, fully integrated with Flask routes and rendered through the web interface.
+
+---
+
+## 🔮 Expected Results
+
+We expect **CryptoLearn** to become a tool that simplifies the teaching of classical cryptography in academic environments, offering both **theoretical and interactive content**.  
+The long-term vision is to expand the platform to include **modern encryption algorithms** (like RSA and AES) and even concepts of **quantum cryptography**, keeping learning up to date with real-world applications.
+
+---
+
+## 🧾 Project Information
+
+📘 **Course:** Embedded Systems / Information Security  
+🏫 **Institution:** UNIP  
+📆 **Semester:** 2° Semester — 2025  
+👨‍💻 **Developed by:** Leonardo Amad  
+
+---
+
+> *"Learning how to protect information is the first step to understanding the digital world."*  
+— **CryptoLearn Team**
