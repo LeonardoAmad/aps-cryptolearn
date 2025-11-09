@@ -1,6 +1,6 @@
+# 🔐 CryptoLearn — Interactive Cryptography Learning Platform
 
 <div align="center">
-# 🔐 CryptoLearn — Interactive Cryptography Learning Platform
 
 When we started this project, we wanted to make the **world of cryptography more accessible and visual**.  
 Many people know that encryption protects their messages and passwords, but few understand *how* it actually works.  
